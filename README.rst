@@ -23,14 +23,12 @@ Available templates are:
 Global settings
 ---------------
 
-Some variables are used with every template.  These should be added to the
-mr.bob config so you don't have to answer them every time. Example:
-
-    [variables]
-
-    author.name = NiteoWeb Ltd.
-    author.email = info@niteoweb.com
-    author.github.user = niteoweb
+Some answers to bob's questions can be pre-filled based on global configuration
+so you don't have to answer them every time. You can store this configuration
+either on you local computer, or if you are working in a team, somewhere
+online. We, NiteoWeb team, for example, have these answers always available for
+us at http://www.niteoweb.com/mrbob.ini. The steps below also tell you to use
+this configuration, but feel free to leave it our or provide your own.
 
 
 Creating a add-on package
@@ -38,9 +36,9 @@ Creating a add-on package
 
 To create a Plone add-on run::
 
-    $ mrbob -O niteoweb.zulu bobtemplates.niteoweb:plone
+    $ mrbob --config http://www.niteoweb.com/mrbob.ini -O niteoweb.zulu bobtemplates.niteoweb:plone
 
-and answer the questions::
+and answer some questions::
 
     Welcome to mr.bob interactive mode. Before we generate directory structure,
     some questions need to be answered.
@@ -73,3 +71,5 @@ CSS and JS.
 
 .. _mr.bob: http://mrbob.readthedocs.org/en/latest/
 .. _NiteoWeb: http://www.niteoweb.com
+.. _Plone: http://plone.org
+.. _Pyramid: http://docs.pylonsproject.org/en/latest/
