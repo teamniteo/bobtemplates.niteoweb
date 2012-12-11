@@ -6,25 +6,18 @@ Introduction
 
 Available templates are:
 
-    -   ``plone``: a template for a full featured Plone add-on, including:
+ * `Plone`_: a template for a full featured Plone add-on, including:
 
-        -   zc.buildout best practices
+   * zc.buildout best practices
+   * GenericSetup install profile
+   * Zope 3 browser layer
+   * z3c.jbot overrides folder
+   * static/ resourceDirectory for serving static resources
+   * Sphinx documentation
+   * test suite with 100% test coverage
+   * Travis CI integration
 
-        -   GenericSetup install profile
-
-        -   Zope 3 browser layer
-
-        -   z3c.jbot overrides folder
-
-        -   static/ resourceDirectory for serving static resources
-
-        -   Sphinx documentation
-
-        -   test suite with 100% test coverage
-
-        -   Travis CI integration
-
-    -   ``pyramid``: not done yet ...
+ * `Pyramid`_: not done yet ...
 
 
 Global settings
