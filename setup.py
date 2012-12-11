@@ -4,11 +4,11 @@ from setuptools import setup
 version = '0.2a1'
 
 setup(
-    name='bobtemplates.kotti',
+    name='bobtemplates.niteoweb',
     version=version,
     description="mr.bob templates for Kotti development",
     long_description=open("README.rst").read() + "\n" +
-                     open("CHANGES.rst").read(),
+                     open("CHANGELOG.rst").read(),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
