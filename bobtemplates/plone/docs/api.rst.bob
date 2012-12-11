@@ -1,0 +1,29 @@
+===
+API
+===
+
+
+Miscellaneous
+=============
+
+.. automodule:: {{{ package.namespace }}}.{{{ package.name }}}
+    :members:
+
+----
+
+.. automodule:: {{{ package.namespace }}}.{{{ package.name }}}.interfaces
+    :members:
+
+
+Tests
+=====
+
+.. automodule:: {{{ package.namespace }}}.{{{ package.name }}}.testing
+    :members:
+
+----
+
+.. automodule:: {{{ package.namespace }}}.{{{ package.name }}}.tests.test_setup
+    :members:
+
+

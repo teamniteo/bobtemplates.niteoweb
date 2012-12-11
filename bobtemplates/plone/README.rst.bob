@@ -1,0 +1,31 @@
+====================
+{{{ package.namespace }}}.{{{ package.name }}}
+====================
+
+A Plone add-on that ...
+
+* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
+* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_
+* `Documentation @ ReadTheDocs <http://{{{ package.name.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
+
+How it works
+============
+
+...
+
+
+Installation
+============
+
+To install `{{{ package.namespace }}}.{{{ package.name }}}` you simply add ``{{{ package.namespace }}}.{{{ package.name }}}``
+to the list of eggs in your buildout, run buildout and restart Plone.
+Then, install `{{{ package.namespace }}}.{{{ package.name }}}` using the Add-ons control panel.
+
+
+Configuration
+=============
+
+...
+
+

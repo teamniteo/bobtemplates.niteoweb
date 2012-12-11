@@ -1,0 +1,13 @@
+language: python
+python:
+  - {{{ python.version }}}
+
+install:
+  - make python=$( which python ) .installed.cfg
+
+script:
+  - make tests
+
+notifications:
+  irc:
+    - "{{{ author.irc }}}"
