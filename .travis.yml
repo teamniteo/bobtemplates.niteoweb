@@ -7,7 +7,6 @@ install:
   - easy_install mr.bob[test,development]
 
 script:
-  - ./bin/test
   - mrbob -O collective.foo --config .travis_answers.ini ./bobtemplates/plone
   - cd collective.foo
   - make
