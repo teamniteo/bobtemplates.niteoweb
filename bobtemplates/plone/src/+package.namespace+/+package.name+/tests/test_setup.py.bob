@@ -27,7 +27,7 @@ class TestInstall(IntegrationTestCase):
     # browserlayer.xml
     def test_browserlayer(self):
         """Test that I{{{ package.namespace.capitalize() }}}{{{ package.name.capitalize() }}}Layer is registered."""
-        from niteoweb.zulu.interfaces import I{{{ package.namespace.capitalize() }}}{{{ package.name.capitalize() }}}Layer
+        from {{{ package.namespace }}}.{{{ package.name }}}.interfaces import I{{{ package.namespace.capitalize() }}}{{{ package.name.capitalize() }}}Layer
         from plone.browserlayer import utils
         self.failUnless(I{{{ package.namespace.capitalize() }}}{{{ package.name.capitalize() }}}Layer in utils.registered_layers())
 
