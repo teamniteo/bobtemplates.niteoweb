@@ -1,0 +1,21 @@
+language: python
+python:
+  - 2.7
+
+install:
+  - virtualenv .
+  - source bin/activate
+  - python setup.py develop
+  - easy_install mr.bob[test,development]
+
+script:
+  - ./bin/test
+  - mrbob -O collective.foo --config .travis_answers.ini ./bobtemplates/plone
+  - cd collective.foo
+  - make
+
+notifications:
+  irc:
+    - "irc.freenode.org#niteoweb"
+  email:
+    - maintenance@niteoweb.com
