@@ -3,8 +3,6 @@ python:
   - 2.7
 
 install:
-  - virtualenv .
-  - source bin/activate
   - python setup.py develop
   - easy_install mr.bob[test,development]
 
