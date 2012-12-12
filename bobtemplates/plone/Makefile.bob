@@ -3,14 +3,13 @@
 
 version = 2.7
 python = bin/python
-pep8_ignores = E501
 options =
 
 all: docs tests
 
 docs: docs/html/index.html
 
-docs/html/index.html: docs/*.rst src/{{{ package.namespace}}}/{{{ package.name }}}/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/browser/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/tests bin/sphinx-build
+docs/html/index.html: docs/*.rst src/{{{ package.namespace}}}/{{{ package.name }}}/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/browser/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/tests/*.py bin/sphinx-build
 	bin/sphinx-build docs docs/html
 	@touch $@
 	@echo "Documentation was generated at '$@'."
@@ -31,8 +30,10 @@ $(python):
 
 tests: .installed.cfg
 	@bin/test
-	@bin/pyflakes src/
-	@bin/pep8 --ignore=$(pep8_ignores) src/
+	@bin/flake8 src/{{{ package.namespace}}}/{{{ package.name }}}
+	@for pt in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.pt"` ; do bin/zptlint $$pt; done
+	@for xml in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.xml"` ; do bin/zptlint $$xml; done
+	@for zcml in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.zcml"` ; do bin/zptlint $$zcml; done
 
 clean:
 	@rm -rf .installed.cfg bin docs/html parts develop-eggs \
