@@ -23,62 +23,70 @@ class BaseTemplateTest(unittest.TestCase):
         options = {
             'dir': os.path.join(os.path.dirname(__file__)),
             'template': self.template,
+            'project': self.project,
         }
         return self.env.run(
-            '%(dir)s/bin/mrbob -O collective.foo --config '
+            '%(dir)s/bin/mrbob -O %(project)s --config '
             '%(dir)s/test_answers.ini %(dir)s/bobtemplates/%(template)s'
             % options)
 
 
 class PloneTemplateTest(BaseTemplateTest):
+    """Tests for the `plone` template."""
     template = 'plone'
+    project = 'collective.foo'
 
-    def test_everything(self):
+    def test_plone_template(self):
+        """Test the `plone` template.
+
+        Generate a project from a template, test which files were created
+        and run all tests in the generated package.
+        """
         result = self.create_template()
         self.assertItemsEqual(
             result.files_created.keys(),
             [
-                'collective.foo',
-                'collective.foo/.travis.yml',
-                'collective.foo/MANIFEST.in',
-                'collective.foo/Makefile',
-                'collective.foo/README.rst',
-                'collective.foo/bootstrap.py',
-                'collective.foo/buildout.cfg',
-                'collective.foo/buildout.d',
-                'collective.foo/buildout.d/base.cfg',
-                'collective.foo/buildout.d/development.cfg',
-                'collective.foo/buildout.d/travis.cfg',
-                'collective.foo/buildout.d/versions.cfg',
-                'collective.foo/docs',
-                'collective.foo/docs/CHANGELOG.rst',
-                'collective.foo/docs/LICENSE.rst',
-                'collective.foo/docs/api.rst',
-                'collective.foo/docs/conf.py',
-                'collective.foo/docs/glossary.rst',
-                'collective.foo/docs/index.rst',
-                'collective.foo/setup.py',
-                'collective.foo/src',
-                'collective.foo/src/collective',
-                'collective.foo/src/collective/__init__.py',
-                'collective.foo/src/collective/foo',
-                'collective.foo/src/collective/foo/__init__.py',
-                'collective.foo/src/collective/foo/browser',
-                'collective.foo/src/collective/foo/browser/__init__.py',
-                'collective.foo/src/collective/foo/browser/configure.zcml',
-                'collective.foo/src/collective/foo/browser/overrides',
-                'collective.foo/src/collective/foo/browser/overrides/.gitignore',
-                'collective.foo/src/collective/foo/browser/static',
-                'collective.foo/src/collective/foo/browser/static/.gitignore',
-                'collective.foo/src/collective/foo/configure.zcml',
-                'collective.foo/src/collective/foo/interfaces.py',
-                'collective.foo/src/collective/foo/profiles',
-                'collective.foo/src/collective/foo/profiles/default',
-                'collective.foo/src/collective/foo/profiles/default/browserlayer.xml',
-                'collective.foo/src/collective/foo/profiles/default/metadata.xml',
-                'collective.foo/src/collective/foo/testing.py',
-                'collective.foo/src/collective/foo/tests',
-                'collective.foo/src/collective/foo/tests/__init__.py',
-                'collective.foo/src/collective/foo/tests/test_setup.py',
+                self.project,
+                self.project + '/.travis.yml',
+                self.project + '/MANIFEST.in',
+                self.project + '/Makefile',
+                self.project + '/README.rst',
+                self.project + '/bootstrap.py',
+                self.project + '/buildout.cfg',
+                self.project + '/buildout.d',
+                self.project + '/buildout.d/base.cfg',
+                self.project + '/buildout.d/development.cfg',
+                self.project + '/buildout.d/travis.cfg',
+                self.project + '/buildout.d/versions.cfg',
+                self.project + '/docs',
+                self.project + '/docs/CHANGELOG.rst',
+                self.project + '/docs/LICENSE.rst',
+                self.project + '/docs/api.rst',
+                self.project + '/docs/conf.py',
+                self.project + '/docs/glossary.rst',
+                self.project + '/docs/index.rst',
+                self.project + '/setup.py',
+                self.project + '/src',
+                self.project + '/src/collective',
+                self.project + '/src/collective/__init__.py',
+                self.project + '/src/collective/foo',
+                self.project + '/src/collective/foo/__init__.py',
+                self.project + '/src/collective/foo/browser',
+                self.project + '/src/collective/foo/browser/__init__.py',
+                self.project + '/src/collective/foo/browser/configure.zcml',
+                self.project + '/src/collective/foo/browser/overrides',
+                self.project + '/src/collective/foo/browser/overrides/.gitignore',
+                self.project + '/src/collective/foo/browser/static',
+                self.project + '/src/collective/foo/browser/static/.gitignore',
+                self.project + '/src/collective/foo/configure.zcml',
+                self.project + '/src/collective/foo/interfaces.py',
+                self.project + '/src/collective/foo/profiles',
+                self.project + '/src/collective/foo/profiles/default',
+                self.project + '/src/collective/foo/profiles/default/browserlayer.xml',
+                self.project + '/src/collective/foo/profiles/default/metadata.xml',
+                self.project + '/src/collective/foo/testing.py',
+                self.project + '/src/collective/foo/tests',
+                self.project + '/src/collective/foo/tests/__init__.py',
+                self.project + '/src/collective/foo/tests/test_setup.py',
             ]
         )
