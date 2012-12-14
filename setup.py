@@ -1,16 +1,14 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.2a1'
+version = '0.1'
 
 setup(
     name='bobtemplates.niteoweb',
     version=version,
-    description="mr.bob templates for Kotti development",
-    long_description=open("README.rst").read() + "\n" +
-                     open("CHANGELOG.rst").read(),
+    description="Templates for NiteoWeb projects.",
+    long_description=open("README.rst").read(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
@@ -21,9 +19,9 @@ setup(
         "Topic :: Utilities",
     ],
     keywords='',
-    author='Andreas Kaiser',
-    author_email='disko@binary-punks.com',
-    url='https://github.com/disko/bobtemplates.kotti',
+    author='NiteoWeb Ltd.',
+    author_email='info@niteoweb.com',
+    url='https://github.com/niteoweb/bobtemplates.niteoweb',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['bobtemplates'],
@@ -33,5 +31,13 @@ setup(
         'setuptools',
         'mr.bob',
     ],
+    extras_require={
+        'test': [
+            'nose',
+            'nose-selecttests',
+            'scripttest',
+            'unittest2',
+        ]
+    },
     entry_points={},
 )

@@ -3,16 +3,15 @@ python:
   - 2.7
 
 install:
-  - python setup.py develop
-  - easy_install mr.bob[test,development]
+  - python bootstrap.py
+  - bin/buildout
 
 script:
-  - mrbob -O collective.foo --config .travis_answers.ini ./bobtemplates/plone
+  - bin/nosetests
+  - mrbob -O collective.foo --config test_answers.ini ./bobtemplates/plone
   - cd collective.foo
   - make
 
 notifications:
   irc:
     - "irc.freenode.org#niteoweb"
-  email:
-    - maintenance@niteoweb.com
