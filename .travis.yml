@@ -8,7 +8,7 @@ install:
 
 script:
   - bin/nosetests
-  - mrbob -O collective.foo --config test_answers.ini ./bobtemplates/plone
+  - bin/mrbob -O collective.foo --config test_answers.ini ./bobtemplates/plone
   - cd collective.foo
   - make
 
