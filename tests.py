@@ -19,7 +19,7 @@ class BaseTemplateTest(unittest.TestCase):
         )
 
     def create_template(self):
-        #root_dir = os.path.join(os.path.dirname(__file__), '../', '../',)
+        """Run mr.bob to create your template."""
         options = {
             'dir': os.path.join(os.path.dirname(__file__)),
             'template': self.template,
