@@ -53,20 +53,21 @@ Then answer some questions::
     if there is no answer.
 
 
-    --> Name of the package: zulu
+    --> Name of the package: foo
+    (namespace is already set in the ~/.mrbob.ini)
 
     ...
 
 And your package is ready! Let's build the development environment and see
 if all tests pass::
 
-    $ cd niteoweb.zulu
+    $ cd collective.foo
     $ make
 
 Great, you are now set to start Zope in foreground mode: ``bin/instance fg``.
 Once Zope is up, point your browser to ``http://localhost:8080``, login as
-``admin:admin``, create a new Plone site while selecting ``niteoweb.zulu`` from
-the list of Add-ons and voilá: a Plone site with your very own add-on
+``admin:admin``, create a new Plone site while selecting ``collective.foo``
+from the list of Add-ons and voilá: a Plone site with your very own add-on
 installed.
 
 Now you can add some customizations to views and templates, or maybe write some
