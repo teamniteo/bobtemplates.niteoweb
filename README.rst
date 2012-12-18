@@ -3,7 +3,9 @@ Introduction
 
 ``bobtemplates.niteoweb`` provides `mr.bob`_ templates to generate packages for
 Plone and Pyramid projects. Templates are designed to be reusable by others,
-individuals and teams.
+individuals and teams. All templates have tests for verifying which files and
+folders were generated, along with tests that run on the actual generated
+package.
 
 Available templates are:
 
@@ -13,9 +15,10 @@ Available templates are:
   * GenericSetup install profile
   * Zope 3 browser layer
   * `z3c.jbot`_ overrides folder
-  * ``static/`` resourceDirectory for serving static resources
+  * ``static/`` resourceDirectory for serving static resources (images, CSS,
+    JS, etc.)
   * `Sphinx`_ documentation
-  * test suite with 100% test coverage
+  * test suite with a solid test coverage
   * `Travis CI`_ integration
 
 * `Pyramid`_: a template for a full featured Pyramid project, work-in-progress.
@@ -28,9 +31,7 @@ Some answers to bob's questions can be pre-filled based on global configuration
 so you don't have to answer them every time. You can store this configuration
 either on you local computer, or if you are working in a team, somewhere
 online. We, at `NiteoWeb Ltd.`_, for example, have these answers always
-available for us at http://www.niteoweb.com/mrbob.ini. Example commands below
-also tell you to use our configuration, but feel free to leave it out or
-provide your own.
+available for us at http://www.niteoweb.com/mrbob.ini.
 
 
 Creating a Plone add-on package
@@ -40,7 +41,7 @@ To create a Plone add-on first install (or upgrade to latest) the
 ``bobtemplates.niteoweb`` package and then run `mrbob`::
 
     $ easy_install -U bobtemplates.niteoweb
-    $ mrbob --config http://www.niteoweb.com/mrbob.ini -O niteoweb.zulu bobtemplates.niteoweb:plone
+    $ mrbob --config ~/.mrbob.ini -O collective.foo bobtemplates.niteoweb:plone
 
 Then answer some questions::
 
@@ -52,11 +53,9 @@ Then answer some questions::
     if there is no answer.
 
 
-    --> Name of the package: niteoweb.zulu
+    --> Name of the package: zulu
 
-    --> Version of the package [0.1]:
-
-    --> License of the package [BSD]:
+    ...
 
 And your package is ready! Let's build the development environment and see
 if all tests pass::
