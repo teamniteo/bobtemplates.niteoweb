@@ -47,6 +47,7 @@ class PloneTemplateTest(BaseTemplateTest):
             result.files_created.keys(),
             [
                 self.project,
+                self.project + '/.gitignore',
                 self.project + '/.travis.yml',
                 self.project + '/MANIFEST.in',
                 self.project + '/Makefile',
