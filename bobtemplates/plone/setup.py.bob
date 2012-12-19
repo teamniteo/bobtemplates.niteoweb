@@ -28,7 +28,7 @@ setup(
     keywords='{{{ package.keywords }}}',
     author='{{{ author.name }}}',
     author_email='{{{ author.email }}}',
-    url='{{{ package.url }}}',
+    url='http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}',
     license='BSD',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['{{{ package.namespace }}}'],

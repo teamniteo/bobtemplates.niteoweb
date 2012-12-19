@@ -6,7 +6,7 @@ A Plone add-on that ...
 
 * `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Documentation @ ReadTheDocs <http://{{{ package.name.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
+* `Documentation @ ReadTheDocs <http://{{{ package.namespace.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
 * `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
 
 How it works
