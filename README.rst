@@ -41,7 +41,7 @@ To create a Plone add-on first install (or upgrade to latest) the
 ``bobtemplates.niteoweb`` package and then run `mrbob`::
 
     $ easy_install -U bobtemplates.niteoweb
-    $ mrbob --config ~/.mrbob.ini -O collective.foo bobtemplates.niteoweb:plone
+    $ mrbob --config ~/.mrbob.ini -O collective.foo bobtemplates:plone
 
 Then answer some questions::
 
