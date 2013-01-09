@@ -24,7 +24,7 @@
         name="default"
         title="{{{ package.namespace }}}.{{{ package.name }}}"
         directory="profiles/default"
-        description='Extension profile for {{{ package.namespace }}}.{{{ package.name }}}.'
+        description="Extension profile for {{{ package.namespace }}}.{{{ package.name }}}."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
