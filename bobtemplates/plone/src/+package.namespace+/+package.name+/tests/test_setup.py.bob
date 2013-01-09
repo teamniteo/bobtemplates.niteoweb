@@ -15,12 +15,12 @@ class TestInstall(IntegrationTestCase):
 
     def test_product_installed(self):
         """Test if {{{ package.namespace }}}.{{{ package.name }}} is installed with portal_quickinstaller."""
-        self.failUnless(self.installer.isProductInstalled('{{{ package.namespace }}}.{{{ package.name }}}'))
+        self.assertTrue(self.installer.isProductInstalled('{{{ package.namespace }}}.{{{ package.name }}}'))
 
     def test_uninstall(self):
         """Test if {{{ package.namespace }}}.{{{ package.name }}} is cleanly uninstalled."""
         self.installer.uninstallProducts(['{{{ package.namespace }}}.{{{ package.name }}}'])
-        self.failIf(self.installer.isProductInstalled('{{{ package.namespace }}}.{{{ package.name }}}'))
+        self.assertFalse(self.installer.isProductInstalled('{{{ package.namespace }}}.{{{ package.name }}}'))
 
     # browserlayer.xml
     def test_browserlayer(self):
