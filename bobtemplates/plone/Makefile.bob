@@ -36,7 +36,7 @@ tests: .installed.cfg
 	@for zcml in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.zcml"` ; do bin/zptlint $$zcml; done
 
 clean:
-	@rm -rf .installed.cfg bin docs/html parts develop-eggs \
+	@rm -rf .installed.cfg .mr.developer.cfg bin docs/html parts develop-eggs \
 		src/{{{ package.namespace}}}.{{{ package.name }}}.egg-info lib include .Python
 
 .PHONY: all docs tests clean
