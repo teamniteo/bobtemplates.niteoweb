@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.2 (unreleased)
+------------------
+
+- Fix for issue #2 (missing variable package.url)
+  [cedricmessiant]
+
+
 0.1.1 (2012-12-18)
 ------------------
 
