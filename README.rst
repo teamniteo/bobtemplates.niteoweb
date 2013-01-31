@@ -37,9 +37,10 @@ available for us at http://www.niteoweb.com/mrbob.ini.
 Creating a Plone add-on package
 -------------------------------
 
-To create a Plone add-on first install (or upgrade to latest) the
-``bobtemplates.niteoweb`` package and then run `mrbob`::
+To create a Plone add-on first install (or upgrade to latest) ``mr.bob`` and
+the ``bobtemplates.niteoweb`` package and then run `mrbob`::
 
+    $ easy_install -U mr.bob
     $ easy_install -U bobtemplates.niteoweb
     $ mrbob --config ~/.mrbob.ini -O collective.foo bobtemplates:plone
 
