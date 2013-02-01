@@ -3,7 +3,7 @@ python:
   - {{{ python.version }}}
 
 install:
-  - make python=$( which python ) .installed.cfg
+  - make python=$TRAVIS_PYTHON_VERSION .installed.cfg
 
 script:
   - make tests
