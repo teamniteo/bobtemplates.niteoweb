@@ -7,6 +7,14 @@ options =
 
 all: docs tests
 
+coverage: htmlcov/index.html
+
+htmlcov/index.html: src/{{{ package.namespace}}}/{{{ package.name }}}/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/tests/*.py bin/coverage
+	@bin/coverage run --source=./src/{{{ package.namespace}}}/{{{ package.name }}}/ --branch bin/test
+	@bin/coverage html -i
+	@touch $@
+	@echo "Coverage report was generated at '$@'."
+
 docs: docs/html/index.html
 
 docs/html/index.html: docs/*.rst src/{{{ package.namespace}}}/{{{ package.name }}}/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/browser/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/tests/*.py bin/sphinx-build
