@@ -38,7 +38,7 @@ $(python):
 
 tests: .installed.cfg
 	@bin/test
-        @bin/flake8 setup.py
+	@bin/flake8 setup.py
 	@bin/flake8 src/{{{ package.namespace}}}/{{{ package.name }}}
 	@for pt in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.pt"` ; do bin/zptlint $$pt; done
 	@for xml in `find src/{{{ package.namespace}}}/{{{ package.name }}} -name "*.xml"` ; do bin/zptlint $$xml; done
