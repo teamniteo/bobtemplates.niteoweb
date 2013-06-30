@@ -9,7 +9,7 @@ all: docs tests
 
 coverage: htmlcov/index.html
 
-htmlcov/index.html: src/{{{ package.namespace}}}/{{{ package.name }}}/*.py bin/coverage
+htmlcov/index.html: README.rst src/{{{ package.namespace}}}/{{{ package.name }}}/*.py bin/coverage
 	@bin/coverage run --source=./src/{{{ package.namespace}}}/{{{ package.name }}}/ --branch bin/test
 	@bin/coverage html -i
 	@touch $@
