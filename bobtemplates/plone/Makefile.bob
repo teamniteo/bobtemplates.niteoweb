@@ -17,7 +17,7 @@ htmlcov/index.html: README.rst src/{{{ package.namespace}}}/{{{ package.name }}}
 docs: docs/html/index.html
 
 docs/html/index.html: docs/*.rst src/{{{ package.namespace}}}/{{{ package.name }}}/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/browser/*.py src/{{{ package.namespace}}}/{{{ package.name }}}/tests/*.py bin/sphinx-build
-	bin/sphinx-build docs docs/html
+	bin/sphinx-build -W docs docs/html
 	@touch $@
 	@echo "Documentation was generated at '$@'."
 
