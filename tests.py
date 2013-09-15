@@ -66,6 +66,8 @@ class PloneTemplateTest(BaseTemplateTest):
                 self.project + '/docs/conf.py',
                 self.project + '/docs/glossary.rst',
                 self.project + '/docs/index.rst',
+                self.project + '/docs/_static',
+                self.project + '/docs/_static/.gitkeep',
                 self.project + '/setup.py',
                 self.project + '/src',
                 self.project + '/src/collective',
