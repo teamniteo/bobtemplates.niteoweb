@@ -4,7 +4,32 @@ Changelog
 0.1.2 (unreleased)
 ------------------
 
-- Fix for issue #2 (missing variable package.url)
+- Add a Pyramid project template.
+  [zupo]
+
+- Fail on Sphinx warnings, don't skip them.
+  [zupo]
+
+- Simplify makefile so that one can supply python interpreter name of path
+  to the executable.
+  [iElectric]
+
+- Speed up Travis builds.
+  [zupo]
+
+- Include setup.py in syntax checks.
+  [zupo]
+
+- New bootstrap.py, to stay in the land of zc.buildout 1.x.
+  [zupo]
+
+- Add support to calculate test coverage.
+  [zupo]
+
+- Use TRAVIS_PYTHON_VERSION env on Travis CI
+  [zupo]
+
+- Fix for issue #2 (missing variable package.url).
   [cedricmessiant]
 
 - Updates to `plone` template.
