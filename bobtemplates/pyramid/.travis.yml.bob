@@ -1,0 +1,15 @@
+language: python
+python:
+  - {{{ python.version }}}
+
+install:
+  - mkdir -p buildout-cache/{eggs,downloads}
+  - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
+  - make version=$TRAVIS_PYTHON_VERSION .installed.cfg
+
+script:
+  - make tests
+
+notifications:
+  irc:
+    - "{{{ author.irc }}}"

@@ -2,7 +2,7 @@
 {{{ package.namespace }}}.{{{ package.name }}}
 ====================
 
-A Plone add-on that ...
+{{{ package.description }}}
 
 * `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_

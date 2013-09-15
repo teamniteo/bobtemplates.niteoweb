@@ -1,0 +1,20 @@
+[compile_catalog]
+directory = {{{ package.name }}}/locale
+domain = {{{ package.name }}}
+statistics = true
+
+[extract_messages]
+add_comments = TRANSLATORS:
+output_file = {{{ package.name }}}/locale/{{{ package.name }}}.pot
+width = 80
+
+[init_catalog]
+domain = {{{ package.name }}}
+input_file = {{{ package.name }}}/locale/{{{ package.name }}}.pot
+output_dir = {{{ package.name }}}/locale
+
+[update_catalog]
+domain = {{{ package.name }}}
+input_file = {{{ package.name }}}/locale/{{{ package.name }}}.pot
+output_dir = {{{ package.name }}}/locale
+previous = true

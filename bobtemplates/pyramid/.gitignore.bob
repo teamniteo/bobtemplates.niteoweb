@@ -1,0 +1,16 @@
+.coverage
+.installed.cfg
+.mr.developer.cfg
+bin/
+build/
+develop-eggs/
+docs/
+docs/html/
+htmlcov/
+include/
+lib/
+local/
+man/
+parts
+var
+{{ package.name }}-app.db

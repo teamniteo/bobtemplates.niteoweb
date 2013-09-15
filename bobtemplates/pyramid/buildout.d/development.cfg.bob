@@ -1,0 +1,19 @@
+[buildout]
+extends = base.cfg
+eggs +=
+   {{{ package.name }}} [test,development]
+
+extensions +=
+    buildout.dumprequirements
+    mr.developer
+
+# mr.developer config
+sources = sources
+auto-checkout =
+
+# dump egg versions into requirements.txt that Heroku uses
+dump-requirements-file = requirements.txt
+overwrite-requirements-file = false
+
+[sources]
+# no sources yet

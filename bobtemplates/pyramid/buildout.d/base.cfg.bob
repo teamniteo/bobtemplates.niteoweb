@@ -1,0 +1,25 @@
+[buildout]
+unzip = true
+newest = false
+extends = versions.cfg
+versions = versions
+prefer-final = true
+extensions = buildout-versions
+develop = .
+
+eggs =
+    {{{ package.name }}}
+parts =
+    scripts
+
+# network speedup
+socket-timeout = 3
+allow-hosts =
+    *.python.org
+
+[scripts]
+recipe = z3c.recipe.scripts
+dependent-scripts = true
+eggs =
+    ${buildout:eggs}
+interpreter = py

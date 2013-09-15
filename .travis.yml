@@ -8,8 +8,12 @@ install:
 
 script:
   - bin/nosetests
-  - bin/mrbob -O collective.foo --config test_answers.ini ./bobtemplates/plone
-  - cd collective.foo
+  - bin/mrbob -O plone.foo --config test_answers.ini ./bobtemplates/plone
+  - cd plone.foo
+  - make
+  - cd ..
+  - bin/mrbob -O foo --config test_answers.ini ./bobtemplates/pyramid
+  - cd foo
   - make
 
 notifications:

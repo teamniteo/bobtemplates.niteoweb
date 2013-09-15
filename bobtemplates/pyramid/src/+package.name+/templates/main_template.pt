@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"
+      metal:define-macro="main">
+
+  <head>
+    <meta charset="utf-8">
+    <title><metal:block define-slot="title">Home</metal:block> - Hermit Coverage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your code coverage!">
+    <meta name="author" content="NiteoWeb Ltd.">
+
+    <!-- Le styles -->
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <link href="../static/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/bootstrapSwitch.css" rel="stylesheet">
+    <link href="../static/{{ package.name }}.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../static/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../static/favicon.ico">
+
+  </head>
+  <body tal:attributes="class python:econtext['view'].__name__">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/"><img src="/static/logo.png" /></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="#"><i class="icon-info-sign icon-white"></i> About</a></li>
+              <li><a href="#"><i class="icon-envelope icon-white"></i> Contact</a></li>
+              <li><a href="#"><i class="icon-heart icon-white"></i> Donate!</a></li>
+            </ul>
+
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" id="usermenu" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-user icon-white"></i> John Smith<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="usermenu">
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Account Settings</a>
+                  </li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">item 1</a></li>
+              <li><a href="#">item 2</a></li>
+              <li><a href="#">item 3</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div metal:define-slot="content" id="content" />
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+      <footer>
+        <p>&copy; NiteoWeb Ltd. 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/jquery.js"></script>
+    <script src="../static/bootstrap-transition.js"></script>
+    <script src="../static/bootstrap-alert.js"></script>
+    <script src="../static/bootstrap-modal.js"></script>
+    <script src="../static/bootstrap-dropdown.js"></script>
+    <script src="../static/bootstrap-scrollspy.js"></script>
+    <script src="../static/bootstrap-tab.js"></script>
+    <script src="../static/bootstrap-tooltip.js"></script>
+    <script src="../static/bootstrap-popover.js"></script>
+    <script src="../static/bootstrap-button.js"></script>
+    <script src="../static/bootstrap-collapse.js"></script>
+    <script src="../static/bootstrap-carousel.js"></script>
+    <script src="../static/bootstrap-typeahead.js"></script>
+    <script src="../static/{{ package.name }}.js"></script>
+
+  </body>
+</html>
