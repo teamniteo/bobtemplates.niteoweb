@@ -1,7 +1,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = 'y.dev0'
+version = '0.3.dev0'
 
 setup(
     name='bobtemplates.niteoweb',
