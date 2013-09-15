@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title><metal:block define-slot="title">Home</metal:block> - Hermit Coverage</title>
+    <title><metal:block define-slot="title">Home</metal:block> - {{{ package.name }}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Track your code coverage!">
     <meta name="author" content="NiteoWeb Ltd.">

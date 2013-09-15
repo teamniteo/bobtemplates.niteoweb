@@ -35,7 +35,7 @@
       <li>a mistyped address</li>
       <li>an out-of-date link</li>
     </ul>
-    <h3>Go back to <a href="http://{{{ package.name }}}.herokuapp.com">Zulu</a>!</h3>
+    <h3>Go back to <a href="http://{{{ package.name }}}.herokuapp.com">{{{ package.name }}}</a>!</h3>
     <script>
       var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
     </script>
