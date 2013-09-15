@@ -6,16 +6,16 @@ A Heroku-deployable Pyramid app to display '{{{ package.name }}}!` on front page
 
 {{{ package.description }}}
 
-* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{ package.name }}>`_
-* `Dev Docs @ GitHub <https://github.com/{{{ author.github.user }}}/{{ package.name }}/blob/master/docs/develop.rst>`_
-* `Test Coverage @ Coveralls <https://coveralls.io/r/{{{ author.github.user }}}/{{ package.name }}>`_
-* `Continuous Integration @ Travis-CI <https://magnum.travis-ci.com/{{{ author.github.user }}}/{{ package.name }}/builds/>`_
-* `Deployed @ Heroku <http://{{ package.name }}.herokuapp.com>`_
+* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.name }}}>`_
+* `Dev Docs @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.name }}}/blob/master/docs/develop.rst>`_
+* `Test Coverage @ Coveralls <https://coveralls.io/r/{{{ author.github.user }}}/{{{ package.name }}}>`_
+* `Continuous Integration @ Travis-CI <https://magnum.travis-ci.com/{{{ author.github.user }}}/{{{ package.name }}}/builds/>`_
+* `Deployed @ Heroku <http://{{{ package.name }}}.herokuapp.com>`_
 
 .. raw:: html
 
-    <img src="https://magnum.travis-ci.com/{{{ author.github.user }}}/{{ package.name }}.png?token=INSERT_TOKEN_HERE&branch=master">
-    <img src="https://coveralls.io/repos/{{{ author.github.user }}}/{{ package.name }}/badge.png">
+    <img src="https://magnum.travis-ci.com/{{{ author.github.user }}}/{{{ package.name }}}.png?token=INSERT_TOKEN_HERE&branch=master">
+    <img src="https://coveralls.io/repos/{{{ author.github.user }}}/{{{ package.name }}}/badge.png">
 
 
 How it works
