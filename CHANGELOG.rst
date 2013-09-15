@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.1.2 (unreleased)
-------------------
+0.2 (2013-09-15)
+----------------
 
 - Add a Pyramid project template.
   [zupo]
