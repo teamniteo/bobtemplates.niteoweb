@@ -19,7 +19,10 @@ after_success:
 
 notifications:
   irc:
-    - "{{{ author.irc }}}"
+    channels:
+      - "{{{ author.irc }}}"
+    template:
+      - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
 
 deploy:
     provider: heroku
