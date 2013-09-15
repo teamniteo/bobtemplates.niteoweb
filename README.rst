@@ -93,7 +93,7 @@ the ``bobtemplates.niteoweb`` package and then run `mrbob`::
 
     $ easy_install -U mr.bob
     $ easy_install -U bobtemplates.niteoweb
-    $ mrbob --config ~/.mrbob.ini -O zulu bobtemplates:pyramid
+    $ mrbob --config ~/.mrbob.ini -O foo bobtemplates:pyramid
 
 Then answer some questions::
 
@@ -105,13 +105,13 @@ Then answer some questions::
     if there is no answer.
 
 
-    --> Name of the package: zulu
+    --> Name of the package: foo
     ...
 
 And your package is ready! Let's build the development environment and see
 if all tests pass::
 
-    $ cd zulu
+    $ cd foo
     $ make
 
 Great, you are now ready to start Pyramid::

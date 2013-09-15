@@ -77,9 +77,10 @@ To redeploy, manually push latest changes to Heroku (not GitHub)::
 IRC deploy notifications
 ------------------------
 
-On every deploy we get an IRC notification in #niteoweb. It's configured with::
+On every deploy we get an IRC notification in {{{ author.irc }}}. It's configured with::
 
     $ heroku addons:add deployhooks:irc \
-        --server=irc.freenode.net
-        --room=niteoweb
+        --server={{{ author.irc.split('#')[0] }}}
+        --room={{{ author.irc.split('#')[1] }}}
         --message="{{user}} deployed {{app}} to {{url}}"
+
