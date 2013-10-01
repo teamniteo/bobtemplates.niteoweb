@@ -12,4 +12,4 @@ local/
 man/
 parts
 var
-{{ package.name }}-app.db
+{{{ package.name }}}-app.db
