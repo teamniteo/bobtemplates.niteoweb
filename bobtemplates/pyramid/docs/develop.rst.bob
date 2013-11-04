@@ -26,7 +26,7 @@ Setting up a local development environment
 Prepare the environment::
 
     # fetch latest code
-    $ git clone https://github.com/{{{ author.github.user }}}/{{ package.name }}.git
+    $ git clone https://github.com/{{{ author.github.user }}}/{{{ package.name }}}.git
     $ cd {{{ package.name }}}
 
     # build development environment
