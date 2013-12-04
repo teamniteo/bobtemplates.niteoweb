@@ -4,13 +4,19 @@ newest = false
 extends = versions.cfg
 versions = versions
 prefer-final = true
-extensions = buildout-versions
+extensions =
+    buildout-versions
+    buildout.dumprequirements
 develop = .
 
 eggs =
     {{{ package.name }}}
 parts =
     scripts
+
+# dump egg versions into requirements.txt that Heroku uses
+dump-requirements-file = ${buildout:directory}/etc/auto_requirements.txt
+overwrite-requirements-file = false
 
 # network speedup
 socket-timeout = 3
