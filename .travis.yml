@@ -14,7 +14,8 @@ install:
   - bin/buildout
 
 script:
-  - bin/nosetests
+  - bin/coverage run --source=tests.py --branch bin/nosetests
+  - bin/coverage html -i
   - bin/mrbob -O plone.foo --config test_answers.ini ./bobtemplates/plone
   - cd plone.foo
   - make

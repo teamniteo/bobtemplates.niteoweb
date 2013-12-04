@@ -33,6 +33,7 @@ setup(
     ],
     extras_require={
         'test': [
+            'coverage',
             'nose',
             'nose-selecttests',
             'scripttest',
