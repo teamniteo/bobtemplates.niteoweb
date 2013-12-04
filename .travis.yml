@@ -5,9 +5,9 @@ python:
 env:
   global:
   - secure: |-
-      Gs5x8Wh6wIn6fdhQYTU+gro+EkISSbegB6ECPHsgekEIUyTPtXZ4QK1FqHE3
-      ZFV+BfmK+Hop+nksWki2l1Tw1zYvVgoa5bqk6Lrj+MlnwnuR7oRCU3FCu9cX
-      ZsQpCYVKoEaklxzcvN/7Gu3cx3DuZgg96191akK82/NhODUwQkI=  # COVERALLS TOKEN
+      ZBDnPcgNo86ve0O71/QSGyq/A2/jk/yfcoEWC5BOSKfG8L1lxrnenqOY34Cx
+      Blm8d0iiX1fut444dTms8g2DEogYn95kK4OqW+0n8qdqQax22LxO4849oevq
+      CjPao9pR4yWPrRZg/+cCNQelUYfQZKtYzXVKMKFlhs/0FfCITLQ=  # COVERALLS_REPO_TOKEN
 
 install:
   - python bootstrap.py
