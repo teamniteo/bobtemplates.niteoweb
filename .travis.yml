@@ -29,7 +29,7 @@ after_success:
 
 notifications:
   irc:
-channels:
+    channels:
       - "irc.freenode.org#niteoweb"
     template:
       - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
