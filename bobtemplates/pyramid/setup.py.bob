@@ -36,10 +36,10 @@ setup(
     zip_safe=False,
     paster_plugins=['pyramid'],
     install_requires=[
+        'SQLAlchemy',
         'pyramid',
         'pyramid_debugtoolbar',
         'pyramid_tm',
-        'SQLAlchemy',
         'transaction',
         'zope.sqlalchemy',
     ],
