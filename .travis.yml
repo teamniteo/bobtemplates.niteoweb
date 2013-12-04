@@ -2,6 +2,13 @@ language: python
 python:
   - 2.7
 
+env:
+  global:
+  - secure: |-
+      Gs5x8Wh6wIn6fdhQYTU+gro+EkISSbegB6ECPHsgekEIUyTPtXZ4QK1FqHE3
+      ZFV+BfmK+Hop+nksWki2l1Tw1zYvVgoa5bqk6Lrj+MlnwnuR7oRCU3FCu9cX
+      ZsQpCYVKoEaklxzcvN/7Gu3cx3DuZgg96191akK82/NhODUwQkI=  # COVERALLS TOKEN
+
 install:
   - python bootstrap.py
   - bin/buildout
@@ -16,6 +23,13 @@ script:
   - cd foo
   - make
 
+after_success:
+ - pip install python-coveralls==2.4.0
+ - coveralls
+
 notifications:
   irc:
-    - "irc.freenode.org#niteoweb"
+channels:
+      - "irc.freenode.org#niteoweb"
+    template:
+      - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
