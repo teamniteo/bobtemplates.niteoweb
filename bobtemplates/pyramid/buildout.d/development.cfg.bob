@@ -1,5 +1,8 @@
 [buildout]
-extends = base.cfg
+extends = 
+    base.cfg
+    code-analysis.cfg
+
 eggs +=
    {{{ package.name }}} [test,development]
 

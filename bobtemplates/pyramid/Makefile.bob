@@ -40,9 +40,9 @@ bin/python:
 	@touch $@
 
 tests: .installed.cfg
-	@bin/flake8 setup.py
-	@bin/flake8 src/{{{ package.name }}}
 	@bin/nosetests -s
+	@bin/flake8 setup.py
+	@bin/code-analysis
 
 clean:
 	@rm -rf .coverage .installed.cfg .mr.developer.cfg .Python bin build \
