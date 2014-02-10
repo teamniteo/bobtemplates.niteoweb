@@ -7,7 +7,6 @@ env:
   - secure: COVERALLS TOKEN
 
 install:
- - npm install jshint -g
  - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
  - make .installed.cfg
 

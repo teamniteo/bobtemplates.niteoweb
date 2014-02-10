@@ -8,7 +8,7 @@ directory = ${buildout:directory}/src/{{{ package.name }}}
 return-status-codes = True
 pre-commit-hook = True
 csslint = False
-jshint = True
+jshint = False
 
 clean-lines = True
 debug-statements = True

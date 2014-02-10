@@ -10,7 +10,6 @@ env:
       CjPao9pR4yWPrRZg/+cCNQelUYfQZKtYzXVKMKFlhs/0FfCITLQ=  # COVERALLS_REPO_TOKEN
 
 install:
-  - npm install jshint -g
   - python bootstrap.py
   - bin/buildout
 
