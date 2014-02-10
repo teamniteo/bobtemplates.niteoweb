@@ -1,3 +1,6 @@
+[nosetests]
+nocapture = 1
+
 [compile_catalog]
 directory = {{{ package.name }}}/locale
 domain = {{{ package.name }}}
