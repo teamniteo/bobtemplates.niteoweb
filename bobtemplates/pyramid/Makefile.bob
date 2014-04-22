@@ -41,7 +41,8 @@ bin/python:
 	@touch $@
 
 tests: .installed.cfg
-	@bin/nosetests -s
+	@bin/nosetests --with-coverage --cover-package={{{ package.name }}} \
+		--cover-min-percentage=10
 	@bin/flake8 setup.py
 	@bin/code-analysis
 
