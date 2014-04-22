@@ -16,4 +16,4 @@ imports = True
 pep3101 = True
 prefer-single-quotes = True
 utf8-header = True
-
+return-status-codes = True
