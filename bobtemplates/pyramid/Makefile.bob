@@ -8,7 +8,8 @@ all: docs tests
 
 coverage: htmlcov/index.html
 
-htmlcov/index.html: src/{{{ package.name }}}/*.py src/{{{ package.name }}}/scripts/*.py bin/coverage
+htmlcov/index.html: src/{{{ package.name }}}/*.py src/{{{ package.name }}}/scripts/*.py src/{{{ package.name }}}/tests/*.py \
+		bin/coverage
 	@bin/coverage run --source=./src/{{{ package.name }}}/ --branch bin/nosetests
 	@bin/coverage html -i
 	@touch $@
