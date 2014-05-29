@@ -10,10 +10,9 @@ Developer documentation
     develop.rst
     deploy.rst
     glossary.rst
+    CHANGELOG.rst
+    LICENSE.rst
 
-
-.. include:: CHANGELOG.rst
-.. include:: LICENSE.rst
 
 Indices and tables
 ==================
