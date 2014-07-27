@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2014-07-27)
 ----------------
 
-- Nothing changed yet.
+- Loads of small fixes on both Plone & Pyramid templates.
+  [zupo]
 
 
 0.2 (2013-09-15)
